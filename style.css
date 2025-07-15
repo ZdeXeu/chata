@@ -1,0 +1,305 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Tělo webu */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(232, 229, 218);
+  color: #333;
+}
+
+/* Kontejner */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+header {
+  background: url('hlavni.jpg') top / cover no-repeat;
+  color: white;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Zarovná na vršek */
+  text-align: center;
+  position: relative;
+  margin-bottom: 0;
+  padding-top: 200px; /* Posune obsah dolů */
+}
+
+
+.header-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  transform: translateY(50px); /* ← tady uprav číslo podle potřeby */
+}
+
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+/* Sekce */
+section {
+  margin-bottom: 100px;
+}
+
+/*galerie*/
+
+.gallery {
+  margin-top: 2rem;
+}
+
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery .images img {
+  width: 100%;
+  height: 300px; /* nebo např. 250px podle potřeby */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery .images img:hover {
+  transform: scale(1.03);
+}
+
+
+/* Vybavení */
+.features .feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.features .feature-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.features .feature-card img {
+  width: 100%;
+  height: 400px; /* nebo třeba 250px – podle toho, co ti sedí víc */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.features .feature-card h3 {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+
+.features .feature-card p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Ceník */
+.pricing .pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pricing .pricing-card {
+  background: #f4f4f4;
+  padding: 25px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pricing .pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+.pricing .pricing-card h3 {
+  font-size: 1.6rem;
+  color: #4CAF50;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pricing .pricing-card p,
+.pricing .pricing-card .price,
+.pricing .pricing-card .price span {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.pricing .pricing-card .price {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #2c6b2f;
+}
+
+.pricing .pricing-card .price span {
+  color: #4CAF50;
+}
+
+.pricing .note {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Kontakt */
+.contact h2 {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+  font-size: 1.4rem;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-item a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVITA */
+@media (max-width: 1024px) {
+  /* Header */
+header {
+  padding-top: 300px; /* Posune obsah dolů */
+}
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  .features .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing .pricing-card {
+    width: 100%;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  
+
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 40vh;
+    padding-top: 110px;
+  }
+  .header-content {
+  padding: 10px;
+}
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .features .feature-card img {
+    height: auto;
+  }
+
+  .pricing .pricing-card {
+    width: 100%;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
